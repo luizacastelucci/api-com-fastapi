@@ -20,7 +20,7 @@ def read_item(table_name: str, item_id: int = None):
     return resultado
     
 @app.post("/{table_name}")
-def create_item(table_name: str, item: dict):
+def create_item(table_name: str, item: dict) :
     must_watch = MustWatch(table_name=table_name, item=item) 
 
     must_watch.inserirSerie()
